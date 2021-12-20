@@ -1,11 +1,11 @@
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
 
-let url = "http://localhost:3000/api/products/" + [id];
+let url = "http://localhost:3000/api/products/" + [id]; // Récupération du produit sélectioné
 fetch(url)
-  .then((response) => response.json())
+  .then((response) => response.json()) // Enregistrement au format JSON
   .then(function (data) {
-    console.table(data);
+    console.table(data); // Control sur la console
 
     document.querySelector("#title").innerHTML = data.name;
     document.querySelector("#price").innerHTML = data.price;
@@ -45,6 +45,7 @@ async function ecouteAjoutPanier() {
       imageUrl: produ.imageUrl,
       price: produ.price,
     };
+    // Test 
     console.log(stock.color);
     //Ajout de l'objet stock au parametre de la fonction "ajouterAuPanier"
     ajouterAuPanier(stock);

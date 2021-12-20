@@ -142,16 +142,6 @@ deleteProduct();
 //----------------------------------------------------------------------
 const buton = document.querySelector("#order");
 buton.addEventListener("click", function () {
- /* const firstName = document.querySelector("#firstName");
-  validInput(firstName);
-  const lastName = document.querySelector("#lastName");
-  const city = document.querySelector("#city");
-  const address = document.querySelector("#address");
-  const email = document.querySelector("#email");
-  validInput(lastName);
-  validInput(city);
-  validaddress(address);
-  validemail(email);*/
   console.log(firstName);
 });
 
