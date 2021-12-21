@@ -30,7 +30,7 @@ async function ecouteAjoutPanier() {
   // fonction qui ecoute l'evenement click sur le bouton ajouter au panier
   var prod = await fetch(local + id_produit); // on concataine les 2
   var produ = await prod.json(); // on recup le canape au format json
-  const AJOUT_PANIER = document.querySelector("#addToCart"); // on recup le bouton ajoputer au panier
+  const AJOUT_PANIER = document.querySelector("#addToCart"); // on recup le bouton ajouter au panier
   AJOUT_PANIER.addEventListener("click", function (e) {
     const productQuantity = document.getElementById("quantity");
     const productColors = document.getElementById("colors");
@@ -58,7 +58,6 @@ ecouteAjoutPanier(); // appel à la fonction d'ecoute d'ajout au panier
 function ajouterAuPanier(stock) {
   // récupération des données dans le localstorage
   let existingStorage = JSON.parse(localStorage.getItem("data")) || []; // on recupere le contenu du localstorage ou a defaut un tableau vide
-  // A.M DEBUT
   const myproduct = existingStorage.find(
     (item) => item.id == stock.id && item.color == stock.color
   );
